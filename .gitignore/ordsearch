@@ -1,0 +1,55 @@
+def binary_search(data, value):
+	low = 0
+	high = len(data) - 1
+
+	while low <= high and data[low] != value:
+
+		i = len(data)//2
+		i = int[i]
+
+		if data[i] == value:
+
+			low = i
+
+		elif value < data[i]:
+
+			high = i - 1
+
+		else:
+
+			low = i + 1
+
+	if data[low] == value:
+
+		return low
+
+	else:
+
+		return -1
+
+def binary_pairs(data, value):
+	low = 0
+	high = len(data) - 1
+	while low <= high and data[low][0] != value:
+
+		i = len(data)//2
+
+		if data[i][0] == value:
+
+			low = i
+
+		elif value < data[i][0]:
+
+			high = i - 1
+
+		else:
+
+			low = i + 1
+
+	if data[low][0] == value:
+
+		return low
+
+	else:
+
+		return -1
